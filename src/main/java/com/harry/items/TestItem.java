@@ -19,7 +19,7 @@ public class TestItem extends ItemBase {
     @Override
     public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
-        player.setPosition(pos.getX(), pos.getY(), pos.getZ());
+        player.setPosition(pos.getX(), pos.getY() + 1, pos.getZ());
         return EnumActionResult.SUCCESS;
     }
 }
