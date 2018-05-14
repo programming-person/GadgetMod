@@ -8,13 +8,16 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.IThrowableEntity;
 
 public class EntityBullet extends EntityThrowable {
-    public EntityBullet(World world) {
-        super(world);
-    }
     public EntityBullet(World world, EntityLivingBase entity) {
         super(world, entity);
-
     }
+
+    @Override
+    protected float getGravityVelocity()
+    {
+        return 0.005F;
+    }
+
     @Override
     public void onImpact(RayTraceResult result) {
         if (result.entityHit == null) {
