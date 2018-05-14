@@ -12,6 +12,10 @@ public class EntityBullet extends EntityThrowable {
         super(world, entity);
     }
 
+    public EntityBullet(World world) {
+        super(world);
+    }
+
     @Override
     protected float getGravityVelocity()
     {
