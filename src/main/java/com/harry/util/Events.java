@@ -41,6 +41,7 @@ public class Events {
                 .entity(EntityBullet.class)
                 .id(new ResourceLocation("testmod", "EntityBullet"), 1)
                 .name("EntityBullet")
+                .tracker(64, 20, false)
                 .build();
         event.getRegistry().register(entry);
     }
